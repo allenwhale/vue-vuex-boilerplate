@@ -1,4 +1,3 @@
-require('es6-promise').polyfill()
 import App from 'src/App'
 import router from 'src/router'
 import store from 'src/vuex/store'
