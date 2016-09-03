@@ -5,4 +5,7 @@ npm-debug.log
 selenium-debug.log
 test/unit/coverage
 test/e2e/reports
+<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
 .*.sw[op]
+=======
+>>>>>>> init commit

@@ -10,8 +10,13 @@ var webpackConfig = require('./webpack.prod.conf')
 
 console.log(
     '  Tip:\n' +
+<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
     '  Built files are meant to be served over an HTTP server.\n' +
     '  Opening index.html over file:// won\'t work.\n'
+=======
+        '  Built files are meant to be served over an HTTP server.\n' +
+        '  Opening index.html over file:// won\'t work.\n'
+>>>>>>> init commit
 )
 
 var spinner = ora('building for production...')

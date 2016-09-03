@@ -4,8 +4,13 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.assetsPath = function (_path) {
     var assetsSubDirectory = process.env.NODE_ENV === 'production'
+<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
     ? config.build.assetsSubDirectory
     : config.dev.assetsSubDirectory
+=======
+        ? config.build.assetsSubDirectory
+        : config.dev.assetsSubDirectory
+>>>>>>> init commit
     return path.posix.join(assetsSubDirectory, _path)
 }
 

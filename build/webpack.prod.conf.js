@@ -7,8 +7,13 @@ var baseWebpackConfig = require('./webpack.base.conf')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var env = process.env.NODE_ENV === 'testing'
+<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
 ? require('../config/test.env')
 : config.build.env
+=======
+    ? require('../config/test.env')
+    : config.build.env
+>>>>>>> init commit
 
 var webpackConfig = merge(baseWebpackConfig, {
     module: {
@@ -49,6 +54,7 @@ var webpackConfig = merge(baseWebpackConfig, {
             filename: process.env.NODE_ENV === 'testing'
             ? 'index.html'
             : config.build.index,
+<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
             template: 'index.html',
             inject: true,
             minify: {
@@ -59,6 +65,17 @@ var webpackConfig = merge(baseWebpackConfig, {
                 // more options:
                 // https://github.com/kangax/html-minifier#options-quick-reference
             },
+=======
+        template: 'index.html',
+        inject: true,
+        minify: {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeAttributeQuotes: true
+            // more options:
+            // https://github.com/kangax/html-minifier#options-quick-reference
+        },
+>>>>>>> init commit
             // necessary to consistently work with multiple chunks via CommonsChunkPlugin
             chunksSortMode: 'dependency'
         }),
@@ -69,10 +86,17 @@ var webpackConfig = merge(baseWebpackConfig, {
                 // any required modules inside node_modules are extracted to vendor
                 return (
                     module.resource &&
+<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
                     /\.js$/.test(module.resource) &&
                     module.resource.indexOf(
                         path.join(__dirname, '../node_modules')
                     ) === 0
+=======
+                        /\.js$/.test(module.resource) &&
+                        module.resource.indexOf(
+                            path.join(__dirname, '../node_modules')
+                        ) === 0
+>>>>>>> init commit
                 )
             }
         }),
@@ -94,8 +118,13 @@ if (config.build.productionGzip) {
             algorithm: 'gzip',
             test: new RegExp(
                 '\\.(' +
+<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
                 config.build.productionGzipExtensions.join('|') +
                 ')$'
+=======
+                    config.build.productionGzipExtensions.join('|') +
+                    ')$'
+>>>>>>> init commit
             ),
             threshold: 10240,
             minRatio: 0.8
