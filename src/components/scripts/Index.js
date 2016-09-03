@@ -10,9 +10,15 @@ export default {
             exampleGet
         }
     },
+    data: {
+    },
+    computed: {
+    },
+    methods: {
+    },
     ready () {
         this.changeMsg('hello! index')
-        this.exampleGet();
+        this.exampleGet().then(() => console.log('get done'));
     }
 }
 
