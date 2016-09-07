@@ -1,4 +1,4 @@
-import { handleMutations } from 'src/vuex-actions'
+import { handleMutations } from 'vuex-actions'
 import { CHANGE_MSG, EXAMPLE_GET } from 'src/vuex/mutation-types'
 
 const state = {
