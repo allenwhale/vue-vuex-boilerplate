@@ -1,4 +1,3 @@
-<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
 <template>
     <div>
         <document-title :title="title">
@@ -54,8 +53,3 @@
     h1
         color: red
 </style>
-=======
-<template src="src/components/templates/Index.html"> </template>
-<script src="src/components/scripts/Index.js"> </script>
-<style src="src/components/styles/Index.css" scoped></style>
->>>>>>> init commit

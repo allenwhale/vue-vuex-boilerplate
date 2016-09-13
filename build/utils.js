@@ -4,6 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.assetsPath = function (_path) {
     var assetsSubDirectory = process.env.NODE_ENV === 'production'
+<<<<<<< e571f61597bbb7acec70957e965fb31cfceabe3d
 <<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
     ? config.build.assetsSubDirectory
     : config.dev.assetsSubDirectory
@@ -11,6 +12,10 @@ exports.assetsPath = function (_path) {
         ? config.build.assetsSubDirectory
         : config.dev.assetsSubDirectory
 >>>>>>> init commit
+=======
+    ? config.build.assetsSubDirectory
+    : config.dev.assetsSubDirectory
+>>>>>>> update structure
     return path.posix.join(assetsSubDirectory, _path)
 }
 
