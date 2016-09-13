@@ -54,8 +54,7 @@
     }
 
 </script>
-<style scoped>
-    h1{
+<style scoped lang="sass">
+    h1
         color: red
-    }
 </style>
