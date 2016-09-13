@@ -3,14 +3,14 @@
 </template>
 
 <script>
-import store from 'src/vuex/store'
+    import store from 'src/vuex/store'
 
-export default {
-    store,
-    route: {
-        canReuse: false
+    export default {
+        store,
+        route: {
+            canReuse: false
+        }
     }
-}
 </script>
 
 <style>

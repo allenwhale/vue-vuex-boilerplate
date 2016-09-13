@@ -4,19 +4,19 @@
 </template>
 
 <script>
-import { changeMsg } from 'src/vuex/actions/Example'
+    import { changeMsg } from 'src/vuex/actions/Example'
 
-export default {
-    vuex: {
-        getters: {
-            example: ({ example }) => example
+    export default {
+        vuex: {
+            getters: {
+                example: ({ example }) => example
+            },
+            actions: {
+                changeMsg
+            }
         },
-        actions: {
-            changeMsg
+        ready () {
+            this.changeMsg('fuck you! 404')
         }
-    },
-    ready () {
-        this.changeMsg('fuck you! 404')
     }
-}
 </script>
