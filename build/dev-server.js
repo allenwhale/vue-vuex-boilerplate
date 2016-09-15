@@ -4,18 +4,8 @@ var webpack = require('webpack')
 var config = require('../config')
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = process.env.NODE_ENV === 'testing'
-<<<<<<< e571f61597bbb7acec70957e965fb31cfceabe3d
-<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
 ? require('./webpack.prod.conf')
 : require('./webpack.dev.conf')
-=======
-    ? require('./webpack.prod.conf')
-    : require('./webpack.dev.conf')
->>>>>>> init commit
-=======
-? require('./webpack.prod.conf')
-: require('./webpack.dev.conf')
->>>>>>> update structure
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port

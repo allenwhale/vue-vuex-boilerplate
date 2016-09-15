@@ -19,5 +19,4 @@
             this.changeMsg('not found')
         }
     }
-}
 </script>

@@ -7,18 +7,8 @@ var baseWebpackConfig = require('./webpack.base.conf')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var env = process.env.NODE_ENV === 'testing'
-<<<<<<< e571f61597bbb7acec70957e965fb31cfceabe3d
-<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
 ? require('../config/test.env')
 : config.build.env
-=======
-    ? require('../config/test.env')
-    : config.build.env
->>>>>>> init commit
-=======
-? require('../config/test.env')
-: config.build.env
->>>>>>> update structure
 
 var webpackConfig = merge(baseWebpackConfig, {
     module: {
@@ -59,10 +49,6 @@ var webpackConfig = merge(baseWebpackConfig, {
             filename: process.env.NODE_ENV === 'testing'
             ? 'index.html'
             : config.build.index,
-<<<<<<< e571f61597bbb7acec70957e965fb31cfceabe3d
-<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
-=======
->>>>>>> update structure
             template: 'index.html',
             inject: true,
             minify: {
@@ -73,20 +59,6 @@ var webpackConfig = merge(baseWebpackConfig, {
                 // more options:
                 // https://github.com/kangax/html-minifier#options-quick-reference
             },
-<<<<<<< e571f61597bbb7acec70957e965fb31cfceabe3d
-=======
-        template: 'index.html',
-        inject: true,
-        minify: {
-            removeComments: true,
-            collapseWhitespace: true,
-            removeAttributeQuotes: true
-            // more options:
-            // https://github.com/kangax/html-minifier#options-quick-reference
-        },
->>>>>>> init commit
-=======
->>>>>>> update structure
             // necessary to consistently work with multiple chunks via CommonsChunkPlugin
             chunksSortMode: 'dependency'
         }),
@@ -97,23 +69,10 @@ var webpackConfig = merge(baseWebpackConfig, {
                 // any required modules inside node_modules are extracted to vendor
                 return (
                     module.resource &&
-<<<<<<< e571f61597bbb7acec70957e965fb31cfceabe3d
-<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
-=======
->>>>>>> update structure
                     /\.js$/.test(module.resource) &&
                     module.resource.indexOf(
                         path.join(__dirname, '../node_modules')
                     ) === 0
-<<<<<<< e571f61597bbb7acec70957e965fb31cfceabe3d
-=======
-                        /\.js$/.test(module.resource) &&
-                        module.resource.indexOf(
-                            path.join(__dirname, '../node_modules')
-                        ) === 0
->>>>>>> init commit
-=======
->>>>>>> update structure
                 )
             }
         }),
@@ -135,18 +94,8 @@ if (config.build.productionGzip) {
             algorithm: 'gzip',
             test: new RegExp(
                 '\\.(' +
-<<<<<<< e571f61597bbb7acec70957e965fb31cfceabe3d
-<<<<<<< 6d311138268c7dd40ceb995ca9974a0f1c96cb8b
                 config.build.productionGzipExtensions.join('|') +
                 ')$'
-=======
-                    config.build.productionGzipExtensions.join('|') +
-                    ')$'
->>>>>>> init commit
-=======
-                config.build.productionGzipExtensions.join('|') +
-                ')$'
->>>>>>> update structure
             ),
             threshold: 10240,
             minRatio: 0.8
