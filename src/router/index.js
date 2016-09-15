@@ -6,19 +6,18 @@ import NotFound from 'src/components/NotFound'
 Vue.use(VueRouter)
 
 var router = new VueRouter({
-    saveScrollPosition: true,
-    history: true,
-    hashbang: false
-})
-
-router.map({
-    '/index': {
-        component: Index,
-        name: 'index'
-    },
-    '*': {
-        component: NotFound
-    }
+    mode: 'history',
+    routes: [
+        {
+            path: '/index',
+            component: Index,
+            name: 'index'
+        },
+        {
+            path: '*',
+            component: NotFound
+        }
+    ]
 })
 
 export default router

@@ -1,55 +1,50 @@
 <template>
-    <h1>this is /index!</h1>
-    <h2>{{ example.msg }}</h2>
-    <h2>{{ computedMsg }}</h2>
-    <h2>{{ data1 }}</h2>
-    <button @click="onClick">Click Me</button>
-
+    <div>
+        <document-title :title="title">
+            <h1>this is /index!</h1>
+            <h2>{{ example.msg }}</h2>
+            <h2>{{ computedMsg }}</h2>
+            <h2>{{ data1 }}</h2>
+            <button @click="onClick">Click Me</button>
+        </document-title>
+    </div>
 </template>
 <script>
-    import { changeMsg, exampleGet } from 'src/vuex/actions/Example'
+    import { mapActions, mapGetters } from 'vuex'
+    import DocumentTitle from 'src/components/utils/DocumentTitle'
 
     export default {
-        vuex: {
-            getters: {
-                example: ({ example }) => example
-            },
-            actions: {
-                changeMsg,
-                exampleGet
-            }
+        components: {
+            'document-title': DocumentTitle
         },
         props: {
         },
         data () {
             return {
-                data1: 'this is data1'
+                data1: 'this is data1',
+                title: 'title'
             }
         },
         computed: {
+            ...mapGetters(['example']),
             computedMsg () {
                 return this.example.msg + ' computed!'
             }
         },
         methods: {
+            ...mapActions(['exampleGet', 'changeMsg']),
             onClick () {
                 alert('On Click')
             }
         },
-        // life cycle
-        created () {
-        },
-        beforeCompile () {
-        },
-        compiled () {
-        },
-        ready () {
-            this.changeMsg('hello! index')
-            this.exampleGet().then(() => console.log('get done'))
-        },
-        beforeDestroy () {
-        },
-        destroyed () {
+        mounted () {
+            this.changeMsg('Index')
+            this.exampleGet().then(() => {
+                console.log('after example get')
+            })
+            setInterval(() => {
+                this.title = Math.random().toString()
+            }, 2000)
         }
     }
 
